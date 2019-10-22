@@ -46,13 +46,13 @@ class Structure {
 
     public function hide($value) {
         if (!is_array($value)) {
-            $this->hidden[] = $value;
+            $this->hidden[] = realpath($value);
 
             return $this;
         }
 
         foreach ($value as $v) {
-            $this->hidden[] = $v;
+            $this->hidden[] = realpath($v);
         }
 
         return $this;
@@ -85,16 +85,16 @@ class Structure {
     }
 
     public function get(string $path) {
+        $path = realpath($path);
         if (!file_exists($path)) {
             throw new FileSystemStructureException("'$path' it's not exists.");
         }
 
         switch ($this->order) {
-            case Structure::ORDER_NAME: $structure = new NameStructure(); break;
             case Structure::ORDER_TYPE: $structure = new TypeStructure(); break;
             case Structure::ORDER_SIZE: $structure = new SizeStructure(); break;
             case Structure::ORDER_TIME: $structure = new TimeStructure(); break;
-            default: throw new FileSystemStructureException('Invalid structure order.');
+            default: $structure = new NameStructure(); break;
         }
 
         $structure->setLeadingName($this->leadingName);
@@ -104,5 +104,21 @@ class Structure {
         $structure->setOrderValue($this->orderValue);
 
         return $structure->get($path);
+    }
+
+    public function getHidden() {
+        return $this->hidden;
+    }
+
+    public function getFilter() {
+        return $this->filter;
+    }
+
+    public function getOrder() {
+        return $this->order;
+    }
+
+    public function getOrderValue() {
+        return $this->orderValue;
     }
 }

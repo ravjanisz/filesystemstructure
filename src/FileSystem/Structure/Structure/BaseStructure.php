@@ -78,6 +78,8 @@ abstract class BaseStructure implements Structure {
     }
 
     public function init(string $path) {
+        $this->objectStructure = [];
+
         $this->basePath = realpath($path);
         $this->basePathLength = strlen($this->basePath);
 
@@ -87,14 +89,43 @@ abstract class BaseStructure implements Structure {
         }
     }
 
-    public function getElement($name, $path) {
+    public function getElement($path) {
         $element = new FsObject();
-        $element->setName($name);
+        $element->setName($this->getName($path));
         $element->setPath($path);
         $element->setTime(filectime($path));
         $this->objectSize->setPath($path);
         $element->setSize($this->objectSize->inBytes());
 
         return $element;
+    }
+
+    public function getLeadingName() {
+        return $this->leadingName;
+    }
+
+    public function getHidden() {
+        return $this->hidden;
+    }
+
+    public function getFilter() {
+        return $this->filter;
+    }
+
+    public function getOrder() {
+        return $this->order;
+    }
+
+    public function getOrderValue() {
+        return $this->orderValue;
+    }
+
+    protected function getName($filePath) {
+        $name = substr($filePath, $this->basePosition);
+        if ($this->leadingName == RootStructure::LEADING_NAME_NO) {
+            $name = substr($filePath, $this->basePathLength + 1);
+        }
+
+        return $name ? $name : '';
     }
 }

@@ -11,8 +11,7 @@ class NameStructure extends BaseStructure implements Structure {
     public function get(string $path) {
         $this->init($path);
 
-        $rootName = substr($this->basePath, $this->basePosition);
-        $root = $this->getElement($rootName, $this->basePath);
+        $root = $this->getElement($this->basePath);
         $root->setType(FsObject::TYPE_ROOT);
         $this->objectStructure = $root;
 
@@ -33,8 +32,7 @@ class NameStructure extends BaseStructure implements Structure {
                 continue;
             }
 
-            $displayName = substr($element, $this->basePathLength + 4);
-            $element = $this->getElement($displayName, $filePath);
+            $element = $this->getElement($filePath);
             switch (true) {
                 case is_dir($filePath):
                     $element->setType(FSObject::TYPE_DIRECTORY);

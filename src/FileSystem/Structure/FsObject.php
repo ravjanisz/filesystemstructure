@@ -67,6 +67,10 @@ class FsObject {
         return $this->childes;
     }
 
+    public function hasChildes() {
+        return $this->hasChildes;
+    }
+
     public function getType() {
         return $this->type;
     }
