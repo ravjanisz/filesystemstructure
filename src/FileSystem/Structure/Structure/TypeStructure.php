@@ -44,7 +44,6 @@ class TypeStructure extends BaseStructure implements Structure {
                 case is_file($filePath):
                     $element->setType(FSObject::TYPE_FILE);
                     break;
-                default: throw new FileSystemStructureException('Invalid file system object type.');
             }
 
             switch ($this->filter) {

@@ -15,7 +15,7 @@ class SizeStructureTest extends TestCase {
         $structure->setLeadingName(RootStructure::LEADING_NAME_YES);
         $structure->setHidden([]);
         $structure->setFilter(RootStructure::FILTER_ALL);
-        $structure->setOrder(RootStructure::ORDER_TIME);
+        $structure->setOrder(RootStructure::ORDER_SIZE);
         $structure->setOrderValue(RootStructure::ORDER_VALUE_ASC);
 
         $this->obj = $structure;

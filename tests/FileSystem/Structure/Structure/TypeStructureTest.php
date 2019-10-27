@@ -15,7 +15,7 @@ class TypeStructureTest extends TestCase {
         $structure->setLeadingName(RootStructure::LEADING_NAME_YES);
         $structure->setHidden([]);
         $structure->setFilter(RootStructure::FILTER_ALL);
-        $structure->setOrder(RootStructure::ORDER_TIME);
+        $structure->setOrder(RootStructure::ORDER_TYPE);
         $structure->setOrderValue(RootStructure::ORDER_VALUE_ASC);
 
         $this->obj = $structure;
@@ -112,6 +112,30 @@ class TypeStructureTest extends TestCase {
         $this->assertEquals('assets/dir/test.txt', $response[2]->getName());
         $this->assertEquals('assets/dir', $response[3]->getName());
         $this->assertEquals('assets', $response[4]->getName());
+    }
+
+    public function testTypeStructureAsc() {
+        $structure = new TypeStructure();
+        $structure->setLeadingName(RootStructure::LEADING_NAME_YES);
+        $structure->setHidden([]);
+        $structure->setFilter(RootStructure::FILTER_ALL);
+        $structure->setOrder(RootStructure::ORDER_TYPE);
+        $structure->setOrderValue(RootStructure::ORDER_VALUE_ASC);
+
+        $response = $structure->get(__DIR__ . '/../assets3');
+        $this->assertEquals(true, is_array($response));
+    }
+
+    public function testTypeStructureDesc() {
+        $structure = new TypeStructure();
+        $structure->setLeadingName(RootStructure::LEADING_NAME_YES);
+        $structure->setHidden([]);
+        $structure->setFilter(RootStructure::FILTER_ALL);
+        $structure->setOrder(RootStructure::ORDER_TYPE);
+        $structure->setOrderValue(RootStructure::ORDER_VALUE_DESC);
+
+        $response = $structure->get(__DIR__ . '/../assets3');
+        $this->assertEquals(true, is_array($response));
     }
 
     private function checkHasNotChildes($response) {

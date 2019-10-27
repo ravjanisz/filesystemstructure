@@ -2,7 +2,6 @@
 
 namespace Rav\FileSystem\Structure\Structure;
 
-use Rav\FileSystem\Structure\FileSystemStructureException;
 use Rav\FileSystem\Structure\FsObject;
 use Rav\FileSystem\Structure\Structure as RootStructure;
 
@@ -43,7 +42,6 @@ class SizeStructure extends BaseStructure implements Structure {
                 case is_file($filePath):
                     $element->setType(FSObject::TYPE_FILE);
                     break;
-                default: throw new FileSystemStructureException('Invalid file system object type.');
             }
 
             switch ($this->filter) {
