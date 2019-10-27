@@ -108,4 +108,21 @@ class NameStructureTest extends TestCase {
         $this->assertEquals('assets/test3.txt', $child1->getName());
         $this->assertEquals('assets/dir', $child2->getName());
     }
+
+    public function testSetGet() {
+        $this->obj->setLeadingName(RootStructure::LEADING_NAME_YES);
+        $this->assertEquals(RootStructure::LEADING_NAME_YES, $this->obj->getLeadingName());
+
+        $this->obj->setFilter(RootStructure::FILTER_DIR);
+        $this->assertEquals(RootStructure::FILTER_DIR, $this->obj->getFilter());
+
+        $this->obj->setHidden(['zonk']);
+        $this->assertEquals(['zonk'], $this->obj->getHidden());
+
+        $this->obj->setOrder(RootStructure::ORDER_NAME);
+        $this->assertEquals(RootStructure::ORDER_NAME, $this->obj->getOrder());
+
+        $this->obj->setOrderValue(RootStructure::ORDER_VALUE_ASC);
+        $this->assertEquals(RootStructure::ORDER_VALUE_ASC, $this->obj->getOrderValue());
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1571768070">
-  <project timestamp="1571768070">
+<coverage generated="1572170438">
+  <project timestamp="1572170438">
     <package name="Rav\FileSystem\Structure">
       <file name="/var/www/html/filesystemstructure.pl/package/src/FileSystem/Structure/FileSystemStructureException.php">
         <class name="Rav\FileSystem\Structure\FileSystemStructureException" namespace="Rav\FileSystem\Structure">
@@ -123,28 +123,28 @@
     <package name="Rav\FileSystem\Structure\Structure">
       <file name="/var/www/html/filesystemstructure.pl/package/src/FileSystem/Structure/Structure/BaseStructure.php">
         <class name="Rav\FileSystem\Structure\Structure\BaseStructure" namespace="Rav\FileSystem\Structure\Structure">
-          <metrics complexity="25" methods="15" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="50" coveredstatements="44" elements="65" coveredelements="53"/>
+          <metrics complexity="25" methods="15" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="50" coveredstatements="49" elements="65" coveredelements="63"/>
         </class>
-        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="28" type="stmt" count="24"/>
-        <line num="29" type="stmt" count="24"/>
-        <line num="31" type="stmt" count="24"/>
-        <line num="32" type="stmt" count="24"/>
-        <line num="34" type="method" name="setLeadingName" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="35" type="stmt" count="24"/>
-        <line num="36" type="stmt" count="24"/>
-        <line num="38" type="method" name="setHidden" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="39" type="stmt" count="24"/>
-        <line num="40" type="stmt" count="24"/>
-        <line num="42" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="43" type="stmt" count="24"/>
-        <line num="44" type="stmt" count="24"/>
-        <line num="46" type="method" name="setOrder" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="47" type="stmt" count="24"/>
-        <line num="48" type="stmt" count="24"/>
-        <line num="50" type="method" name="setOrderValue" visibility="public" complexity="1" crap="1" count="24"/>
-        <line num="51" type="stmt" count="24"/>
-        <line num="52" type="stmt" count="24"/>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="28" type="stmt" count="25"/>
+        <line num="29" type="stmt" count="25"/>
+        <line num="31" type="stmt" count="25"/>
+        <line num="32" type="stmt" count="25"/>
+        <line num="34" type="method" name="setLeadingName" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="35" type="stmt" count="25"/>
+        <line num="36" type="stmt" count="25"/>
+        <line num="38" type="method" name="setHidden" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="39" type="stmt" count="25"/>
+        <line num="40" type="stmt" count="25"/>
+        <line num="42" type="method" name="setFilter" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="43" type="stmt" count="25"/>
+        <line num="44" type="stmt" count="25"/>
+        <line num="46" type="method" name="setOrder" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="47" type="stmt" count="25"/>
+        <line num="48" type="stmt" count="25"/>
+        <line num="50" type="method" name="setOrderValue" visibility="public" complexity="1" crap="1" count="25"/>
+        <line num="51" type="stmt" count="25"/>
+        <line num="52" type="stmt" count="25"/>
         <line num="56" type="method" name="readDir" visibility="protected" complexity="7" crap="7.02" count="24"/>
         <line num="57" type="stmt" count="24"/>
         <line num="58" type="stmt" count="24"/>
@@ -175,22 +175,22 @@
         <line num="97" type="stmt" count="24"/>
         <line num="98" type="stmt" count="24"/>
         <line num="100" type="stmt" count="24"/>
-        <line num="103" type="method" name="getLeadingName" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="104" type="stmt" count="0"/>
-        <line num="107" type="method" name="getHidden" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="108" type="stmt" count="0"/>
-        <line num="111" type="method" name="getFilter" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="112" type="stmt" count="0"/>
-        <line num="115" type="method" name="getOrder" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="116" type="stmt" count="0"/>
-        <line num="119" type="method" name="getOrderValue" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="120" type="stmt" count="0"/>
+        <line num="103" type="method" name="getLeadingName" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="104" type="stmt" count="1"/>
+        <line num="107" type="method" name="getHidden" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="108" type="stmt" count="1"/>
+        <line num="111" type="method" name="getFilter" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="115" type="method" name="getOrder" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="116" type="stmt" count="1"/>
+        <line num="119" type="method" name="getOrderValue" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="120" type="stmt" count="1"/>
         <line num="123" type="method" name="getName" visibility="protected" complexity="3" crap="3" count="24"/>
         <line num="124" type="stmt" count="24"/>
         <line num="125" type="stmt" count="24"/>
         <line num="126" type="stmt" count="8"/>
         <line num="129" type="stmt" count="24"/>
-        <metrics loc="130" ncloc="130" classes="1" methods="15" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="50" coveredstatements="44" elements="65" coveredelements="53"/>
+        <metrics loc="130" ncloc="130" classes="1" methods="15" coveredmethods="14" conditionals="0" coveredconditionals="0" statements="50" coveredstatements="49" elements="65" coveredelements="63"/>
       </file>
       <file name="/var/www/html/filesystemstructure.pl/package/src/FileSystem/Structure/Structure/NameStructure.php">
         <class name="Rav\FileSystem\Structure\Structure\NameStructure" namespace="Rav\FileSystem\Structure\Structure">
@@ -422,6 +422,6 @@
     <file name="/var/www/html/filesystemstructure.pl/package/src/FileSystem/Structure/Structure/Structure.php">
       <metrics loc="9" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="10" loc="732" ncloc="732" classes="8" methods="54" coveredmethods="42" conditionals="0" coveredconditionals="0" statements="306" coveredstatements="275" elements="360" coveredelements="317"/>
+    <metrics files="10" loc="732" ncloc="732" classes="8" methods="54" coveredmethods="47" conditionals="0" coveredconditionals="0" statements="306" coveredstatements="280" elements="360" coveredelements="327"/>
   </project>
 </coverage>
